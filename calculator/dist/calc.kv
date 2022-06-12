@@ -1,0 +1,202 @@
+#: import  utils kivy.utils
+<Root>
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width,root.height
+
+        TextInput:
+            id: score
+            text: "0"
+            halign : "right"
+            font_size: 65
+            size_hint: (1, .15)
+            multiline: False
+
+
+        GridLayout:
+            size: root.width,root.height
+            cols: 4
+            rows: 5
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "CE"
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.clear()
+            Button:
+                id: clear
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "C"
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.clear()
+
+            Button:
+
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: u"\u00AB"
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.remove()
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "/"
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.divide_sign()
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "7"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(7)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "8"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(8)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "9"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(9)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "X"
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.multiply_sign()
+
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "4"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(4)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "5"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(5)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "6"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(6)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "-"
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.subtract_sign()
+
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "1"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(1)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "2"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(2)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "3"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(3)
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "+"
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.add_sign()
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "+/-"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.pos_neg()
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "0"
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.button_press(0)
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "."
+                color: utils.get_color_from_hex('03fc84')
+                background_normal:''
+                background_color: utils.get_color_from_hex('000000')
+                on_press: root.dot()
+
+            Button:
+                size_hint: (0.2,0.2)
+                font_size: 32
+                text: "="
+                color: utils.get_color_from_hex('000000')
+                background_normal:''
+                background_color: utils.get_color_from_hex('03fc84')
+                on_press: root.equals()
